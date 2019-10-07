@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>Труляля</title>
+		<meta charset="utf-8">
+	</head>
+
+	<body>
+		<!-- form - контейнер для полей форм -->
+		<form action="#" method="post"
+			enctype="multipart/form-data" autocomplete="on" name="form1"> 
+			<!-- для отправки файлов на сервер -->
+			<!-- action - обработчик данных формы -->
+			<!-- method - метод передачи данных фопмы -->
+			<!-- enctype - нужно вставлять, если форма предусматривает прикрепление файлов пользователем -->
+			<!-- autocomplete - запоминает введённое (автоподстановка) -->
+			<!-- name - имя формы для доступа к ней через сценарии -->
+
+
+			<fieldset>
+				<!-- используетс для группировки, в браузере отображается в виде рамки, не обязателен  -->
+				<!-- если к fieldset добавиь disabled, то будет неактивна вся группа -->
+				<br>
+				<legend>Текстовые формы</legend>
+				<label for="text">Введите имя</label>
+				<input type="readonly" id="text" type="text" value="some text">
+				<input disabled type="text" placeholder="Введите имя">
+				<!-- readonly - текстовое поле не может быть изменено пользователем -->
+				<!-- disabled - поле заблокировано -->
+
+				<br>
+				<!-- ВАЛИДАЦИЯ ПОЧТОВОГО АДРЕСА -->
+				<label>Введите email</label>
+				<input required autofocus type="email">
+				<!-- фокус на элемента формы -->
+				<!-- required - значит, что это поле обязательно для заполнения -->
+				<br>
+
+				<!-- ВВОД ПАРОЛЯ -->
+				<label for="pwd">Введите пароль</label>
+				<input minlength="3" maxlength="9" id="pwd" type="password"> -->
+				<!-- ограничили длину вводимого, можно использовать и для других полей -->
+				<br>
+
+				<!-- поле поиска -->
+				<input type="search">
+
+				<!-- поле для валидации URL -->
+				<input type="url">
+
+			</fieldset>
+
+			<fieldset>
+				<legend>Загрузка файла на сервер</legend>
+				<input type="file" multiple accept="image/*">
+				<!-- multiple - если мы хотим чтоб загружалось несколько файлов -->
+				<!-- отображения емён фалов можно будет делать в JS -->
+				<!-- accept - ограничиваем тип загружаемого файла -->
+				<!-- disable,value,required тоже доступны -->
+
+			</fieldset>
+				<legend>Поле для ввода чисел</legend>
+				<input type="number" min="2" max="100" step="2">
+				<input type="range" min="0" max="100">
+				<!-- ползунок? визально значений никаких не пишеит, надо подключать JS -->				
+			</fieldset>
+
+			<fieldset>
+				<legend>Чекбоксы и радиокнопки</legend>
+				<label><input checked type="checkbox">Чекбокс</label>
+				<!-- поставить галочку; checked = при загрузке страницы галочка уже будет стоять-->
+				<br>
+
+				<label><input type="radio">Радиокнопка</label>
+				<!-- отметить точкой -->
+
+			</fieldset>
+
+			<fieldset>
+				<legend>Группы радиокнопок</legend>
+				<label><input type="radio" name="answer">Да</label>
+				<label><input type="radio" name="answer">Нет</label>
+				<label><input type="radio" name="answer">Не знаю</label>
+
+				<!-- когда радиокнопки сгруппированы, то можно выбрать только оди вариант ответа -->
+			</fieldset>
+
+			<fieldset>
+				<legend>Группировка чекбоксов</legend>
+				<label><input type="checkbox" name="answer2[]">Вариант 1</label>
+				<label><input type="checkbox" name="answer2[]">Вариант 2</label>
+				<label><input type="checkbox" name="answer2[]">Вариант 3</label>
+
+				<!-- Предсматривает несколько вариантов, и это ЗАПОМИНАЕТ СЕРВЕР, он делает из этих вариантов массив!!! Т.е. все варианты для него - массив и из них он для себя отмечает отмеченные 
+				Так привязывать label к input тоже можно!
+				-->
+			</fieldset>
+
+			<fieldset>
+				<legend>Взятие цвета / Скрытое поле</legend>
+				<input type="color">
+
+				<br>
+				<input type="hidden" value="info">
+				<!-- данные, которые не должен ыидеть пользователь, но которые должны отправляться на сервер. Короче для проверок безопасности и т.п. -->
+			</fieldset>
+
+			<fieldset>
+				<legend>Выбор даты и времени</legend>
+				<label for="time">Выбор времени</label>
+				<input id="time" type="time" min="12:00">
+
+				<br>
+				<label for="date">Выбор даты</label>
+				<input id="date" type="date" min="2000-01-01">
+
+				<br>
+
+				<label for="datetime">Выбор даты и времени</label>
+				<input id="datetime" type="datetime-local">
+
+				<!-- эти инпуты отображаются по-разному во всех браузерах. Чтобы отображение было одинаковым, надо подключать библиотеку JS -->
+
+				<br>
+
+				<label>Выбор месяца, недели</label>
+				<input type="month">
+				<input type="week">
+
+			</fieldset>
+
+			
+			<!-- КНОПКИ -->
+			<fieldset>
+				<legend>Кнопки (тег input)</legend>
+				<input type="submit" value="Надпись на кнопке">
+				<!-- отправляет введённые данные на сервер. Можно без value, тогда по умолчанию будет "Отпраыить" -->
+
+				<br>
+				<input type="reset" value="Очистить поля формы">
+				<!-- стирает всё введённое, нечего не отправляет на сервер -->
+
+				<br>
+				<input type="button" value="Просто кнопка">
+				<!-- просто кнопка, в хтмл не несёт функцию, но в ней что-то можно прикрутить в JS -->
+
+				<br>
+				<input type="image" src="путь к кнопке" alt="Картинка не подгрузилась">
+				<!-- кнопка в виде картинки. Без функционала -->
+
+			</fieldset>
+
+			<fieldset>
+				<legend>Кнопки через тег button</legend>
+				<button type="submit">Отпраивть данные формы</button>
+				<!-- По сути, то же самое, только через другой тег. Используется и то, и то. Работает одинаково -->
+
+				<button type="button" >Кнопка без функции</button>
+			</fieldset>
+
+			
+			<!-- МНОГОСТРОЧНОЕ ТЕКСТОВОЕ ПОЛЕ -->
+			<fieldset>
+				<legend>Многострочное текстовое поле</legend>
+				<textarea autofocus required placeholder="Напишите что-нибудь" cols="40" rows="10" wrap="soft"></textarea>
+				<!-- autofocus, required, placeholder - всё опционально -->
+			</fieldset>
+
+			<fieldset>
+				<legend>Раскрывающиеся списки</legend>
+				<select name="select" size="3" required >
+					<option value="1">Элемент 1</option>
+					<option value="2" selected>Элемент 2</option>
+					<option value="3">Элемент 3</option>
+				</select>
+				<!--size - можно не ставить, тогда будет 1 строчкой (обычный выпадающий список) 
+					disable - можно отключить как весь список (ставим в select), либо отдельный элемент (option) 
+					name и value - СТАВИМ ОБЯЗАТЕЛЬНО! нужны для отправки данных на сервер-->
+				<br>
+				<select name="select2" multiple >
+					<optgroup label="Группа вариантов 1" >
+						<option value="1">Вариант 1</option>
+						<option value="2">Вариант 2</option>
+						<option value="3">Вариант 3</option>
+					</optgroup>
+					<optgroup label="Группа вариантов 2" >
+						<option value="4">Вариант 1</option>
+						<option value="5">Вариант 2</option>
+						<option value="6">Вариант 3</option>
+					</optgroup>
+				</select>
+
+				<!--Multiple - можно выбрать несколько вариантов 
+					Отключить можно весь список, группу или конкретный вариант-->
+
+			</fieldset>
+
+
+
+
+
+		</form>
+
+
+
+
+	</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Форма ввода</title>
+</head>
+<body>
+	<h1>Заполните форму</h1>
+	<form action="#" method="post" enctype="multipart/form-data" autocomplete="on" name="form1">
+		
+		<fieldset>
+			<legend>Данные исполнителя</legend>
+			<label for="login">ФИО исполнителя</label>
+			<input required autofocus type="text" id="login" placeholder="Александр Сергеевич Пушкин">
+			<br>
+			<label for="position">Должность</label>
+			<input required type="text" id="position" placeholder="Старший экономист">
+			<br>
+			<label for="phone">Номер телефона</label>
+			<input required type="text" id="phone" placeholder="555-55-55">
+			<br>
+			<label for="email">Адрес электронной почты</label>
+			<input required type="email" id="email">
+			<br>
+			<label for="pass">Пароль</label>
+			<input required type="pwd" id="pass" minlength="8">
+			<br>
+		</fieldset>
+
+		<fieldset required>
+			<legend>Наименование учреждения, сведения о руководителях</legend>
+			<select name="organization" size="1">
+				<option value="1" selected>СПб ГБПОУ "Академия машиностроения им. Ж.Я. Котина</option>
+				<option value="2">СПб ГБПОУ "Академия промышленных технологий"</option>
+				<option value="3">СПб ГБПОУ "Академия транспортных технологий"</option>
+				<option value="4">СПб ГБПОУ "Академия управления городской средой, градостроительства и печати"</option>
+				<option value="5">СПб ГБПОУ "Петровский колледж"</option>
+				<option value="6">СПб ГБПОУ "Политехнический колледж городского хозяйства"</option>
+				<option value="7">СПб ГБПОУ "Санкт-Петербургский архитектурно-строительный колледж"</option>
+				<option value="8">СПб ГБПОУ "Санкт-Петербургский технический колледж управления и коммерции"</option>
+				<option value="9">СПб ГБПОУ "Санкт-Петербургский техникум отраслевых технологий, финансов и права"</option>
+			</select>
+			<br>
+			<select name="chief" multiple size="8">
+				<optgroup label="Руководитель учреждения" >
+					<option value="1">Директор</option>
+					<option value="2">И.о. директора</option>
+				</optgroup>
+				<optgroup label="Руководитель отраслевого подразделения" >
+					<option value="3">Главный бухгалтер</option>
+					<option value="4">И.о. главного бухгалтера</option>
+					<option value="5">Главный экономист</option>
+					<option value="6">И.о. главного экономиста</option>
+				</optgroup>
+			</select>
+			<br>
+			<input type="text" placeholder="ФИО директора" id="director">
+			<br>
+			<input type="text" placeholder="ФИО рук-ля структурного подразделения" id="manager">
+		</fieldset>
+		
+		<fieldset required>
+			<legend>Этап бюджета</legend>
+				<label><input type="radio" name="redaction[]">01 КЦ</label>
+				<label><input type="radio" name="redaction[]">01 ДП (Полная потребность)</label>
+				<label><input type="radio" name="redaction[]">02 КЦ</label>
+				<label><input type="radio" name="redaction[]">02 ДП (Полная потребность)</label>
+				<label><input type="radio" name="redaction[]">03 (Утверждённый бюджет)</label>
+				<br>
+				<label for="time">Время отправки</label>
+				<input disabled id="time" type="time">
+				<br>
+				<label for="date">Дата отправки</label>
+				<input disabled id="date" type="date">
+				<br>
+				<label for="datetime">Дата и время отправки</label>
+				<input id="datetime" type="datetime-local">				
+		</fieldset>
+
+		<fieldset required>
+			<legend>Исходные данные для расчёта</legend>			<br>
+			<label>Код специльности</label>
+			<input type="search">
+			<br>
+			<select name="study" multiple size="8">
+				<optgroup label="Форма обучения" >
+					<option value="1">Очная</option>
+					<option value="2">Заочная</option>
+					<option value="3">Очно-заочная</option>
+				</optgroup>
+				<optgroup label="База" >
+					<option value="4">Основное общее образование</option>
+					<option value="5">Среднее общее образование</option>					
+				</optgroup>
+				<optgroup label="Базовое/углублённое" >
+					<option value="6">Базовое</option>
+					<option value="7">Углублённое</option>			
+				</optgroup>
+			</select>
+			<br>
+			<label><input type="range" name="month" min="12" max="48" step="6">Продолжительность (месяцев)</label>
+			<br>
+			<label><input type="number" name="children" min="1" step="1">Среднегодовой контингент</label>
+		</fieldset>
+
+		<fieldset>
+			<legend>Загрузка файла</legend>
+			<label><input required type="file" name="table" accept=".xls,.xlsx" value="Загрузить файл"></label>			
+			<br>
+			<textarea placeholder="Комментарий к файлу" wrap="soft" cols="40" rows="5"></textarea>
+			<label><input type="checkbox" name="correction">Я внёс исправления в форму, направленную ранее</label>
+		</fieldset>
+
+		<fieldset>
+			<button type="submit">Отправить заполненную форму</button>
+			<button type="reset">Удалить введённые данные</button>
+			<input type="image" src="images/img.save.jpg" alt="Сохранить и продолжить заполнение" height="50" width="50">
+		</fieldset>
+		
+	</form>
+</body>
+</html>
