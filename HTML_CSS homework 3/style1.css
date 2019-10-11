@@ -1,0 +1,32 @@
+body {
+		background-image: url(images/back.jpg);
+		background-repeat: repeat;
+		background-position: left top;
+		background-attachment: fixed;
+		background-size: auto;
+
+	}
+
+nav li {
+	list-style-type: none;
+	padding: 10px;
+	background: #4682B4;
+	display: inline-block;
+	box-shadow: 2px 2px 2px 1px grey;
+	border-radius: 8px;
+
+}
+nav li a {
+	text-decoration: none;
+	font-weight: bold;
+	color: #E9967A;
+	padding: 10px;
+
+}
+.inline-block {
+	display: inline-block;
+	margin: 5px 5px 30px;
+}
+.justi {
+	text-align: justify;
+}
