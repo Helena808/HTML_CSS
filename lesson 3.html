@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Подключение стилей / CSS-селекторы</title>
+	<style>
+		h2 {
+			color: blue;
+		}
+	</style>
+
+	<!-- Подключение файла со стилями -->
+	<link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+	<h1>Стили</h1>
+	<h1 style="color:red">Встраивание - подключение стилей через атрибут style</h1>
+	<h2>Вложение - подключение стилей через тег style в теге head</h2>
+	<h3 class="text-center">Связывание - подключение файлов через тег link в теге head</h3>
+	
+	<div id="container"></div>
+
+	<p class="text-center">Lorem ipsum dolor sit amet.
+	</p>
+
+	<!-- для эммета - слово lorem8(8 - количество рандомных слов) -->
+
+	<p><span>Lorem ipsum</span> dolor sit amet.</p>
+
+	<div>
+		<p><span>Lorem ipsum</span> dolor sit amet.</p>
+	</div>
+
+
+	<!-- Применяем стиль только к ссылке, вложенной во вложенное: -->
+	<div>
+		<p class="green">
+			Lorem 
+			<a href="#">ipsum </a> 
+			dolor sit.
+		</p>
+	</div>
+
+		<div>
+		<p class="brown">
+			Lorem 
+			<a href="#">ipsum </a> 
+			dolor sit.
+		</p>
+	</div>
+
+	<div class="example">
+		Lorem ipsum dolor sit amet
+		<p>Lorem ipsum dolor sit amet.</p>
+		<p>Lorem ipsum dolor sit amet.</p>
+	</div>
+
+
+<!-- В названии класса - можно, а в ид нельзя -->
+	<h5 class="some-class" id="some_id">
+		Специфичность (приоритет)
+		встроенный 
+		стиль 1000
+		id    0100
+		class 0010
+		tag   0001
+		
+	</h5>
+</body>
+</html>

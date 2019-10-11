@@ -1,0 +1,145 @@
+div {
+	width: 400px;
+	height: 200px;
+	/*это параметры самого элемента, 
+	а есть ещё кое-что*/
+
+	background: orange;
+
+	/*ВНЕШНИЕ ПОЛЯ (margin)*/
+	margin: 20px;
+	/*поля с 4 сторон*/
+
+	margin: 15px 30px;
+	/*верх-низ, право-лево*/
+
+	margin: 15px 20px 10px; 
+	/*верх право-лево низ*/
+
+	margin: 30px 12px 20px 10px;
+	/*верх право низ лево*/
+
+	margin-top: 10px;
+	margin-right: 15px;
+	margin-left: 12px;
+	margin-bottom: 20px;
+	/*то же самое, только зачем?..*/
+
+	/*Схлопывание марджина 
+	нижний марджин верхнего + верхний марджин нижнего => веселье*/
+
+	/*ВНУТРЕННИЙ ОТСТУП (padding)*/
+	/*Это отступ ВНУТРИ ЭЛЕМЕНТА*/
+	/*Синтаксис и логика такие же*/
+	padding: 15px;
+
+	/*РАМКА - то что между полем и отступом*/
+	/*border: ширина тип (ПОСМОТРЕТЬ!) цвет*/
+	border: 2px dashed red;
+	
+	border-top:1px solid black;
+	border-right: 2px solid green;
+	/*можно задать каждую отдельно*/
+
+	/*Скругление рамки*/
+	border-radius: 15px;
+	border-top-left-radius: 0px;
+
+	}
+
+	.block1,
+	.line {
+		text-decoration: none;
+		color: orange;
+		background: blue;
+		padding: 10px;
+	}
+
+
+	.line {
+		display: inline; 
+		/*элемент будет отображаться и вести себя как срочный*/
+	}
+	.block2 {
+		display: inline-block;
+		background: yellow;
+		/*элемент ... как блочно-срочный*/
+		/*как блочные, но выстраиваются друг за другом*/
+	}
+
+	.block1 {
+		display: block;
+		/*элемент будет отображаться и вести себя как блочный*/
+	}
+
+	/*МЕНЮШКА*/
+	/*Убираем маркеры списка в НАВ*/
+	/*Делаем блочно-строчно=ставим их в ряд*/
+	/*Делаем отступ*/
+	/*Заливаем*/
+	nav li {
+		list-style-type: none;
+		display: inline-block;
+		padding: 15px;
+		background: yellow;
+	}
+
+	
+	/*ФОН - ПОСМОТРЕТЬ!!!*/
+	body {
+		background-image: url("путь к карттикне");
+		background-repeat: ;
+		background-position: ;
+		background-attachment: ;
+		background-size: ;
+	}
+
+	/*ТЕНЬ БЛОКА*/
+	div {
+		/*box-shadow: [inset - тень внутри блока - если надо]*/
+					/*смещение по горизонт*/
+					/*смещение по вертик*/
+					/*радиус размытия (больше 0)*/
+					/*растяжение*/
+					/*цвет;*/
+		box-shadow: 8px -6px 3px 2px grey;
+	}
+
+	/*Псевдоклассы*/
+	/*link - непосещённая ссылка*/
+	a:link {
+		background: red;
+	}
+
+	a:visited {
+		background: green;
+	}
+	/*focus - элемент к которому перешли при помощи таб или мышкой
+	как правило, поля формы*/
+	a:focus {
+		background: grey;
+		border: 1px solid red;
+	}
+
+	/*hover - в момент наведения*/
+	.class1:hover {
+		background: red;
+	}
+
+	/*active - в момент нажатия*/
+	.class2:active {
+		border: 1px solid green;
+	}
+
+	/*Псевдоклассы, относящиеся к элементам формы*/
+
+	/*Для стилизации всех заблокированных элементов форм*/
+	.elem:disabled {}
+	/*понятно*/
+	.elem:enabled {}
+
+	/*Исключительно option,radio,checkbox*/
+	/*Стилизуем выделенное*/
+	.elem:checked {}
+
+	
