@@ -1,0 +1,60 @@
+header {
+	position: fixed; /*фиксируем элемент на странице*/
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 35px;
+	background: #00FFAA;
+	z-index: 1; /*на передний план*/
+}
+
+body {
+	height: 6000px;
+	margin: 0;
+}
+
+.corner {
+	height: 100px;
+	width: 100px;
+	position: fixed;
+	bottom: 0px;
+	right: 0px;
+	background: #1122AA;
+}
+
+h1 {
+	/*относительное позиционирование*/
+	position: relative;
+	top: 30px;
+	right: 100px;
+	left: 55px;
+	
+}
+
+.image {
+	position: relative;
+	top: 10px;
+	
+}
+
+.image h2 {
+	position: absolute;
+	top: 50px;
+	left: 50px;
+}
+
+.image p {
+	position: absolute;
+	top: 100px;
+	left: 50px;
+}
+
+img {
+	width: 100%;
+	height: auto;
+}
+
+.wrapper {
+	max-width: 1200px;
+	margin: 0 auto;
+}

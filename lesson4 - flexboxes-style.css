@@ -1,0 +1,62 @@
+.flex-container-1 div,
+.flex-container-2 div,
+.flex-container-3 div,
+.flex-container-4 div,
+.flex-container-5 div {
+	width: 100px;
+	height: 50px;
+	border: 1px solid blue;
+	background: #BB99FF
+}
+.flex-container-1 {
+	display: flex; /*свойство распространяется только на дочерние!*/
+	background: #CC00AA;
+	justify-content: space-between;
+	/*flex-start - прижаты слева по умолчанию*/
+	/*flex-end - прижаты права*/
+	/*center - по центру*/
+	/*space-between - распределены по всей области с равными отступами*/
+	/*space-around - всё пространство делится на равные части => есть отступы слева и спарва*/
+}
+
+.flex-container-2 {
+	height: 80px;
+	display: flex;
+	background: #CC5577;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.flex-container-2 div:nth-child(2) { /*применяем свойство к конкретному элементу*/
+	height: 60px;
+}
+
+.flex-container-3 {
+	display: flex;
+	background: #CC11CC;
+	/*flex-direction: row-reverse; *//*обратный порядок*/
+	flex-direction: column;
+}
+
+.flex-container-4 {
+	width: 300px;
+	display: flex;
+	background: #5500AA;
+	flex-wrap: wrap; /*разрешаем элементам переноситься при необходимости*/
+/*	флексбокс будет сжиматься и разжиматься в зависимости от содержимого*/
+	justify-content: space-around;
+}
+
+.flex-container-5 {
+	/*Элементы расположены по вертикальной оси, 
+	но у контейнера будут отсутупы слева и снизу*/
+	height: 1000px; /*ВЫСОТУ ОБЯЗАТЕЛЬНО!!!*/
+	width: 300px;
+	display: flex;
+	background: #5500AA;
+	flex-wrap: wrap; /*ОБЯЗАТЕЛЬНО!!!*/
+	flex-direction: row; /*ОБЯЗАТЕЛЬНО!!!*/
+	align-content: space-around;
+	justify-content: space-around;
+}
+
