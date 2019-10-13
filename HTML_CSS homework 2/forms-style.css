@@ -1,0 +1,35 @@
+body {
+	margin: 0;
+	background-image: url(images/back.jpg);
+	background-repeat: repeat;
+	background-position: left top;
+	background-attachment: fixed;
+	background-size: auto;
+}
+h1 {
+	margin: 0;
+	padding: 15px;
+	background: #BC8F8F;
+}
+
+fieldset {
+	background: #FFFACD;
+	margin: 20px;
+	padding: 10px;	
+	border: 1px solid #6A5ACD;
+	border-radius: 10px;
+	box-shadow: 4px 4px 3px 2px grey;
+}
+
+legend {
+	font-weight: bold;
+	color: #483D8B;
+}
+
+label,
+input,
+select,
+textarea,
+button {
+	margin: 5px 10px;
+}
