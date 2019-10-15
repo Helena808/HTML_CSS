@@ -1,0 +1,75 @@
+div {
+	border: 1px solid black;
+}
+
+.none {
+	display: none;
+}
+
+.hidden {
+	visibility: hidden;
+}
+
+#parent :first-child {
+	background: orange;
+}
+
+#parent :last-child {
+	background: violet;
+}
+
+#parent :nth-child(3) {
+	background: pink;
+}
+
+#parent :nth-child(odd) {
+	border-bottom: 3px solid yellow;
+}
+
+#target {
+	width: 300px;
+	height: 100px;
+	background: #AA22FF;
+	opacity: 0.2;
+}
+
+#target:target {
+	opacity: 1;
+	display: none;
+}
+
+ul {
+	list-style-type: none;
+}
+
+li::before {
+	content: "\2740";
+	color: orangered;
+}
+
+/*Ставим картинку вместо маркера*/
+.image::before {
+	content: "";
+	height: 40px;
+	width: 40px;
+	margin: 0;
+	display: inline-block;
+	background-image: url("images/cat1.jpg");
+	background-size: cover;
+	vertical-align: middle;
+	border-radius: 50%; /*делаем картинку круглой*/
+}
+
+/*Форматирование кавычек*/
+p {
+	quotes: '<' '>';	
+}
+p::before {
+	content: open-quote;
+}
+p::after {
+	content: close-quote;
+}
+
+
+
