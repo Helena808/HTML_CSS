@@ -39,6 +39,10 @@ header ul a {
 	flex: 2;
 }
 
+.part11 {
+	flex-direction: column;
+}
+
 .part2 {
 	flex: 1;
 }
