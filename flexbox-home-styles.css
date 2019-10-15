@@ -1,0 +1,58 @@
+.mainbox {
+	height: 400px;
+	border: 1px solid #880055;
+}
+
+.flexbox {
+	display: flex;
+}
+
+.justify {
+	justify-content: space-around;
+}
+
+.border-right {
+	border-right: 1px solid #880055;
+}
+
+.border-bottom {
+	border-bottom: 1px solid #880055;
+}
+
+.column {
+	flex-direction: column;
+}
+
+.big {
+	flex: 2;
+}
+
+.small {
+	flex: 1;
+}
+
+.half {
+	flex: 1;
+}
+
+.background {
+	background: #DA70D6;
+}
+.part2 {
+	height: 400px; /*ВЫСОТУ ОБЯЗАТЕЛЬНО!!!*/
+	flex-wrap: wrap; /*ОБЯЗАТЕЛЬНО!!!*/
+	align-content: space-around;
+	}
+
+.box {
+	height: 20px;
+	width: 80%;
+	background: #FFFFE0;
+	border: 1px solid #880055;
+	margin: 5px;
+	padding: 10px;
+}
+
+
+
+
