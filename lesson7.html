@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Адаптивность</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- initial-scale=от 0.1 до 1 - начальный масштаб страницы -->
+	<!-- user-scalable=no - запрет на масштабирование юзером -->
+	<!-- minimum-scale - минимальный масштаб -->
+	<link rel="stylesheet" type="text/css" href="css/lesson7.css">
+</head>
+<body>
+	<header>
+		<div class="contacts flex">
+			<span>Adress</span>
+			<span>+1(911)8876534</span>
+			<a href="#">Lorem ipsum</a>
+		</div>
+		<div class="horizontal-nav flex">
+			<img src="images/cat4.jpg" class="flex-1">
+			<nav class="flex-6">
+				<ul class="flex">
+					<li><a href="#">Main</a></li>
+					<li><a href="#">About</a></li>
+					<li><a href="#">FAQ</a></li>
+					<li><a href="#">Contacts</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+<!-- СЛАЙДЕР - ДЕЛАЕТСЯ ЧЕРЕЗ СПИСОК.
+ 1 элементу назначается класс, потом JS этот класс переставляет 
+ другим по очереди -->
+	<section id="slider">
+		<ul>
+			<!-- Первый слайд -->
+			<li class="active">
+				<img src="images/cat1.jpg">
+				<p>Lorem ipsum dolor sit amet, consectetur.</p>
+			</li>
+
+			<!-- Второй слайд -->
+			<li>
+				<img src="images/cat2.jpg">
+				<p>Lorem ipsum dolor sit amet, consectetur.</p>
+			</li>
+
+			<!-- Третий слайд -->
+			<li>
+				<img src="images/cat3.jpg">
+				<p>Lorem ipsum dolor sit amet, consectetur.</p>
+			</li>
+		</ul>
+	</section>
+
+	<section class="border">
+		<p>Заголовок</p>
+		<p>Заголовок</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+	</section>
+
+
+</body>
+</html>

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--
+        initial-scale (от 0.1 до 1)
+        начальный масштаб страницы
+
+        user-scalable (yes / no)
+
+        minimum-scale - минимальмый масштаб
+        maximum-scale - минимальмый масштаб
+    -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body> <!--16px-->
+    <header>  <!--font-size: 1.2em-->
+        <div class="contacts"> <!--width: 2em-->
+           <div class="container flex">
+               <p class="address">Lorem ipsum dolor, 34</p>
+               <p class="phone">+7(921)456-67-93<span>Заказать звонок</span></p>
+               <a class="mail" href="#">lorem@ipsum.com</a>
+           </div>
+        </div>
+        <div>
+            <div class="container flex">
+                <div class="flex-1 menu">
+                    <img src="img/logo.png">
+                </div>
+                <nav class="flex-8 flex flex-xs-column">
+                    <a class="flex-1 text-right menu-xs" href="#">Main</a>
+                    <a class="flex-1 text-right menu-xs" href="#">About</a>
+                    <a class="flex-1 text-right menu-xs" href="#">Catalog</a>
+                    <a class="flex-1 text-right menu-xs" href="#">Contacts</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <section id="slider">
+        <ul>
+            <li class="active"> <!--первый слайд-->
+                <img src="img/2.jpg">
+                <!--текст дб на картинке-->
+                <p>SLIDE 1</p>
+            </li>
+            <li> <!--второй слайд-->
+                <img src="img/2.jpg">
+                <p>SLIDE 2</p>
+            </li>
+            <li> <!--третий слайд-->
+                <img src="img/2.jpg">
+                <p>SLIDE 3</p>
+            </li>
+        </ul>
+    </section>
+
+    <main class="container">
+        <section class="border text-center">
+            <p>
+                Lorem ipsum dolor sit amet.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto aspernatur explicabo impedit labore mollitia rem sed sequi sunt tenetur voluptatem!
+            </p>
+        </section>
+
+        <section class="info">
+            <p class="text-center">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto aspernatur explicabo impedit labore mollitia rem sed sequi sunt tenetur!
+            </p>
+
+            <div class="info-items flex flex-xs-column">
+                <div class="flex flex-xs-column">
+                    <div class="flex-1">
+                        <img src="img/card.jpg">
+                    </div>
+                    <div class="flex-4">
+                        <p>Lorem ipsum dolor</p>
+                        <ul>
+                            <li>Lorem ipsum dolor sit amet.</li>
+                            <li>Lorem ipsum dolor sit amet adipisicing.</li>
+                            <li>Lorem ipsum dolor.</li>
+                            <li>Lorem ipsum dolor sit amet.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="flex flex-xs-column">
+                    <div class="flex-1">
+                        <img src="img/card.jpg">
+                    </div>
+                    <div class="flex-4">
+                        <p>Lorem ipsum dolor</p>
+                        <ul>
+                            <li>Lorem ipsum dolor sit amet</li>
+                            <li>Lorem ipsum dolor sit amet adipisicing.</li>
+                            <li>Lorem ipsum dolor sit amet</li>
+                            <li>Lorem ipsum dolor sit amet</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <section class="examples">
+        <div class="container flex-column">
+            <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+            <div class="flex flex-xs-column">
+                <div class="examples-item">
+                    <img src="img/Desert.jpg">
+                    <p class="text-center">Lorem ipsum.</p>
+                </div>
+                <div class="examples-item">
+                    <img src="img/Desert.jpg">
+                    <p class="text-center">Lorem ipsum.</p>
+                </div>
+                <div class="examples-item">
+                    <img src="img/Desert.jpg">
+                    <p class="text-center">Lorem ipsum.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="download">
+        <div class="container flex flex-xs-column">
+            <div class="flex-1 flex-column">
+                <span>Lorem ipsum dolor sit amet.</span>
+                <span>Lorem ipsum dolor sit, consectetur.</span>
+            </div>
+            <a class="flex-1 text-center" href="img/card.jpg" download>Download Picture</a>
+        </div>
+    </section>
+
+    <section class="catalog">
+        <div class="container flex flex-xs-column">
+            <div class="catalog-item">
+                <img src="img/card.jpg">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Aut beatae dolorum, molestias mollitia optio quae quasi voluptatum. Alias culpa facilis fuga ipsa,
+                    porro quia rerum sit ut veniam vero. Omnis!
+                </p>
+                <a class="text-center" href="#">Подробнее</a>
+            </div>
+
+            <div class="catalog-item">
+                <img src="img/card.jpg">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Aut beatae dolorum, molestias mollitia optio quae quasi voluptatum. Alias culpa facilis fuga ipsa,
+                    porro quia rerum sit ut veniam vero. Omnis!
+                </p>
+                <a class="text-center" href="#">Подробнее</a>
+            </div>
+
+            <div class="catalog-item">
+                <img src="img/card.jpg">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Aut beatae dolorum, molestias mollitia optio quae quasi voluptatum. Alias culpa facilis fuga ipsa,
+                    porro quia rerum sit ut veniam vero. Omnis!
+                </p>
+                <a class="text-center" href="#">Подробнее</a>
+            </div>
+
+            <div class="catalog-item">
+                <img src="img/card.jpg">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Aut beatae dolorum, molestias mollitia optio quae quasi voluptatum. Alias culpa facilis fuga ipsa,
+                    porro quia rerum sit ut veniam vero. Omnis!
+                </p>
+                <a class="text-center" href="#">Подробнее</a>
+            </div>
+
+            <div class="catalog-item">
+                <img src="img/card.jpg">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Aut beatae dolorum, molestias mollitia optio quae quasi voluptatum. Alias culpa facilis fuga ipsa,
+                    porro quia rerum sit ut veniam vero. Omnis!
+                </p>
+                <a class="text-center" href="#">Подробнее</a>
+            </div>
+
+            <div class="catalog-item">
+                <img src="img/card.jpg">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Aut beatae dolorum, molestias mollitia optio quae quasi voluptatum. Alias culpa facilis fuga ipsa,
+                    porro quia rerum sit ut veniam vero. Omnis!
+                </p>
+                <a class="text-center" href="#">Подробнее</a>
+            </div>
+        </div>
+    </section>
+
+<!-- СПРАЙТЫ -->
+    <footer>
+        <div class="container">
+           <a href="#" class="facebook"></a>
+           <a href="#" class="twitter"></a>
+           <a href="#" class="youtube"></a>
+           <a href="#" class="insta"></a>
+           <a href="#" class="google"></a>
+        </div>
+    </footer>
+
+
+</body>
+</html>

@@ -1,6 +1,14 @@
-p {
-	float: left;
+@import "grid-css.css";
+* {
+    box-sizing: border-box;
 }
+
 div {
-	clear: both;
+    border: 1px solid black;
 }
+
+img {
+    width: 100%;
+    height: auto;
+}
+
